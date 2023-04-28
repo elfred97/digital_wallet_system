@@ -1,0 +1,1 @@
+CREATE TABLE `digital_wallet_system`.`balance` ( `id` INT NOT NULL AUTO_INCREMENT , `balance` DOUBLE NOT NULL , `user_id` INT NOT NULL , `updated_at` DATETIME NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;

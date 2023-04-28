@@ -1,0 +1,94 @@
+<div class="container pt-4">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">API Docs</li>
+        </ol>
+    </nav>
+    <div class="row">
+        <div class="col-md-6 offset-md-2">
+            <h2>API Docs</h2>
+            <hr>
+
+            <h4>Balance Inquiry</h4>
+            <p>Get the user balance</p>
+            <div class="card mb-2">
+                <div class="card-body">
+                    <p class="text-left no-margin">
+                        <strong style="padding-right: 3rem">GET</strong>  http://localhost:5000/api/balance-inquiry/{id}
+                    </p>
+                </div>
+            </div>
+            <h5>Parameters</h5>
+            <ul>
+                <li>
+                    <strong>{id}</strong> (Number) User ID
+                </li>
+            </ul>
+            <h5>Return</h5>
+            <ul>
+                <li><strong>id</strong> - (int) User ID</li>
+                <li><strong>first_name</strong> - (varchar) User's first name</li>
+                <li><strong>last_name</strong> - (varchar) User's last name</li>
+                <li><strong>status</strong> - (tinyint) <i>Note: 1 = Active, 2 = Inactive</i></li>
+                <li><strong>balance</strong> - (Float) Money amount</li>
+            </ul>
+            <hr>
+
+            <h4 class="pt-4">Cashin</h4>
+            <p>Add money to the account.</p>
+            <div class="card mb-2">
+                <div class="card-body">
+                    <p class="text-left no-margin">
+                        <strong style="padding-right: 3rem">POST</strong>  http://localhost:5000/api/cash-in
+                    </p>
+                </div>
+            </div>
+            <h5>Body Parameters</h5>
+            <ul>
+                <li>
+                    <strong>{userId}</strong> (Number) Id for the User
+                </li>
+                <li>
+                    <strong>{amount}</strong> (Float) Amount of money to be added
+                </li>
+            </ul>
+            <h5>Return</h5>
+            <ul>
+                <li><strong>id</strong> - (int) User ID</li>
+                <li><strong>first_name</strong> - (varchar) User's first name</li>
+                <li><strong>last_name</strong> - (varchar) User's last name</li>
+                <li><strong>status</strong> - (tinyint) <i>Note: 1 = Active, 2 = Inactive</i></li>
+                <li><strong>total_balance</strong> - (Float) Money amount</li>
+            </ul>
+            <hr>
+            
+            <h4 class="pt-4">Debit</h4>
+            <p>Deduct money to the account.</p>
+            <div class="card mb-2">
+                <div class="card-body">
+                    <p class="text-left no-margin">
+                        <strong style="padding-right: 3rem">POST</strong>  http://localhost:5000/api/debit
+                    </p>
+                </div>
+            </div>
+            <h5>Body Parameters</h5>
+            <ul>
+                <li>
+                    <strong>{userId}</strong> (Number) Id for the User
+                </li>
+                <li>
+                    <strong>{amount}</strong> (Float) Amount of money to be added
+                </li>
+            </ul>
+            <h5>Return</h5>
+            <ul>
+                <li><strong>id</strong> - (int) User ID</li>
+                <li><strong>first_name</strong> - (varchar) User's first name</li>
+                <li><strong>last_name</strong> - (varchar) User's last name</li>
+                <li><strong>status</strong> - (tinyint) <i>Note: 1 = Active, 2 = Inactive</i></li>
+                <li><strong>total_balance</strong> - (Float) Money amount</li>
+            </ul>
+        </div>
+    </div>
+</div>

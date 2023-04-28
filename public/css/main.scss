@@ -1,0 +1,31 @@
+body{
+    color: black;
+}
+a{
+    text-decoration: none;
+}
+.card{
+    display: flex;
+    // justify-content: center;
+    align-items: center;
+    text-align: center;
+    .icon-3x{
+        font-size: 2.5rem;
+    }
+    .card-header, .card-body{
+        width: 100%;
+    }
+}
+.pull-right{
+    text-align: right;
+}
+.bg-blue{
+    background: #5e78ec;
+    color: white;
+}
+.text-left{
+    text-align: left;
+}
+.no-margin{
+    margin: 0;
+}

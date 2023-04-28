@@ -1,0 +1,46 @@
+
+<div class="container pt-5 pb-6">
+  <!-- Content here -->
+  <div class="row">
+    <div class="col-md-8 offset-md-2">
+      <div class="row  pb-4">
+        <div class="col-8">
+            <h4>All Active Users</h4>
+        </div>
+        <div class="col-4 d-flex justify-content-end">
+          <a href="/addUser" class="btn btn-primary btn-sm"> + Add User</a>
+        </div>
+      </div>
+      {{#if alert}}
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            {{alert}}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        {{/if}}
+      <table class="table table-bordered">
+      <thead class="table-dark">
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">First</th>
+          <th scope="col">Last</th>
+          <th scope="col" class="text-end">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+         {{#each rows}}
+        <tr>
+          <td scope="row">{{this.id}}</td>
+          <td>{{this.first_name}}</td>
+          <td>{{this.last_name}}</td>
+          <td class="position-relative pull-right">
+            <a href="/find/{{this.id}}" class="btn btn-secondary btn-sm"><i class="bi bi-eye"></i> View</a>
+            <a href="/updateUser/{{this.id}}" class="btn btn-primary btn-sm"><i class="bi bi-pencil"></i> Edit</a>
+            <a href="/deleteUser/{{this.id}}" class="btn btn-danger btn-sm"><i class="bi bi-user-x"></i> Delete</a>
+          </td>
+        </tr>
+        {{/each}}
+      </tbody>
+    </table>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,51 @@
+<div class="container">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item"><a href="/find/{{userId}}">User</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Cash In</li>
+        </ol>
+    </nav>
+    <div class="row pb-4 pt-4">
+        {{#if alert}}
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            {{alert}}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        {{/if}}
+        {{#if err_alert}}
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            {{err_alert}}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        {{/if}}
+        <div class="col-md-6 offset-md-3">
+            {{#each rows}}
+            <div class="card bg-blue">
+                <div class="card-header">
+                    <h6>Balance Available</h6>
+                    <h4>Php. {{this.total_balance}}</h4>
+                </div>
+            </div>
+            {{/each}}
+            <div class="card mt-3">
+                <div class="card-header">
+                    <h4>Cash In</h4>
+                </div>
+                <div class="card-body">
+
+                    <form action="/cash-in/{{userId}}" method="POST">
+                        <input type="number" class="form-control" name="userId" value="{{userId}}" readonly hidden>
+                        <div class="mb-3">
+                            <label for="fname" class="form-label">Amount</label>
+                            <input type="number" class="form-control" step=".01" max="100000" name="amount">
+                        </div>
+                        <div class="mb-3">
+                            <button class="btn btn-primary" type="submit">CashIn</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

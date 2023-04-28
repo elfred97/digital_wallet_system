@@ -1,0 +1,43 @@
+body {
+  color: black;
+}
+
+a {
+  text-decoration: none;
+}
+
+.card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.card .icon-3x {
+  font-size: 2.5rem;
+}
+
+.card .card-header, .card .card-body {
+  width: 100%;
+}
+
+.pull-right {
+  text-align: right;
+}
+
+.bg-blue {
+  background: #5e78ec;
+  color: white;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.no-margin {
+  margin: 0;
+}
+/*# sourceMappingURL=main.css.map */

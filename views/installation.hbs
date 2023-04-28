@@ -1,0 +1,46 @@
+<div class="container pt-4 pb-4">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Installation</li>
+        </ol>
+    </nav>
+    <div class="row">
+        <div class="col-md-6 offset-md-2">
+            <h2>Installation</h2>
+            <hr>
+
+            <h4 class="pt-4">Database Setup</h4>
+            <h6>Steps: </h6>
+            <p><strong>1.</strong> Create a database "digital_wallet_system".</p>
+            <p><strong>2.</strong> Create by importing the "user-schema.sql" to the database.</p>
+            <p><i>Note: To test the user data.</i></p>
+            <p><strong>3.</strong> Import the "user-data.sql" data to the user table.</p>
+            <p><strong>4.</strong> Create by import the "balance-schema.sql" to the database.</p>
+            <p><strong>5.</strong> Create by import the "transactions-schema.sql" to the database.</p>
+            <hr>
+
+            <h4 class="pt-4">.env Setup</h4>
+            <p>Rename the .env_sample.config to .env</p>
+            <p>Configure the .env data </p>
+            <div class="card">
+                <div class="card-body text-left">
+                    <code>
+                        DB_HOST = localhost <br>
+                        DB_NAME = digital_wallet_system <br>
+                        DB_USER = root <br>
+                        DB_PASS = <br>
+                    </code>
+                </div>
+            </div>
+            <hr>
+
+            <h4 class="pt-4">Command</h4>
+            <div class="card">
+                <div class="card-body text-left">
+                    <code>npm start</code>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
