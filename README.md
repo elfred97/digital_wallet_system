@@ -35,3 +35,49 @@ DB_PASS =
 ## Command
 npm update
 npm start
+
+
+# API Docs
+## Balance Inquiry
+Get the user balance
+
+GET http://localhost:5000/api/balance-inquiry/{id}
+
+Parameters
+-{id} (Number) User ID
+Return
+-id - (int) User ID
+-first_name - (varchar) User's first name
+-last_name - (varchar) User's last name
+-status - (tinyint) Note: 1 = Active, 2 = Inactive
+-balance - (Float) Money amount
+
+## Cashin
+Add money to the account.
+
+POST http://localhost:5000/api/cash-in
+
+Body Parameters
+-{userId} (Number) Id for the User
+-{amount} (Float) Amount of money to be added
+Return
+-id - (int) User ID
+-first_name - (varchar) User's first name
+-last_name - (varchar) User's last name
+-status - (tinyint) Note: 1 = Active, 2 = Inactive
+-total_balance - (Float) Money amount
+
+## Debit
+Deduct money to the account.
+
+POST http://localhost:5000/api/debit
+
+Body Parameters
+-{userId} (Number) Id for the User
+-{amount} (Float) Amount of money to be added
+Return
+-id - (int) User ID
+-first_name - (varchar) User's first name
+-last_name - (varchar) User's last name
+-status - (tinyint) Note: 1 = Active, 2 = Inactive
+-total_balance - (Float) Money amount
