@@ -1,5 +1,11 @@
 # digital_wallet_system
 
+## Requirements
+
+npm
+node js
+mysql
+
 ## Database Setup
 Steps:
 1. Create a database "digital_wallet_system".
